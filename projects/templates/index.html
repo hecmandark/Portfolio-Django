@@ -41,6 +41,8 @@
   {% for project in projects%}
   <div class="col">
     <div class="card bg-secondary text-white h-100">
+      <a class="text-decoration-none text-white" href="{{project.url}}" target="_blank">
+
       <div class="">
         <img
           src="{{project.image.url}}"
@@ -49,11 +51,11 @@
         />
       </div>
       <div class="card-body">
-        <a class="text-decoration-none text-white" href="{{project.url}}">
           <h5 class="card-title">{{project.title}}</h5>
           <p class="card-text">{{project.description|striptags|truncatechars:50}}</p>
-        </a>
+        
       </div>
+      </a>
     </div>
   </div>
   {% endfor %}
